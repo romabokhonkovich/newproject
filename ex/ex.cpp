@@ -1,4 +1,5 @@
 ﻿#include<iostream>
+#include<conio.h>
 using namespace std;
 
 class calc
@@ -35,8 +36,19 @@ public:
 
 int main()
 {
+	char tmp;
 	calc res;
     calc t1(5);
 	calc t2(10);
-	cout << res.fdiv(t1,t2);
+	cin >> tmp;
+
+		if(tmp=='-')
+			cout << res.fadd(t1, t2);
+		if (tmp == '+')
+			cout << res.fdiv(t1, t2);
+		if (tmp == '*')
+			cout << res.fmul(t1, t2);
+		if (tmp == '/')
+			cout << res.fdiv(t1, t2);
+	
 }
